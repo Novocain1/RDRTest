@@ -82,21 +82,26 @@ namespace Client
 
         public static async Task<bool> LoadModel(uint hash)
         {
+            string name = CachedHashes.Forward[hash];
+
             if (API.IsModelValid(hash))
             {
                 API.RequestModel(hash, false);
                 while (!API.HasModelLoaded(hash))
                 {
-                    Debug.WriteLine($"Waiting for model {hash} to load...");
+                    Debug.WriteLine($"Waiting for model {name} ({hash}) to load...");
 
                     //wait 100 ms
                     await BaseScript.Delay(100);
                 }
+
+                Debug.WriteLine($"Model {name} ({hash}) loaded.");
+
                 return true;
             }
             else
             {
-                Debug.WriteLine($"Model {hash} is not valid!");
+                Debug.WriteLine($"Model {name} ({hash}) is not valid!");
                 return false;
             }
         }
