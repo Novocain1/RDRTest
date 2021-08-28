@@ -6,11 +6,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A9B7521A-40BB-44DC-B2BA-B72F085A02B7}</ProjectGuid>
+    <ProjectGuid>{434E1EE6-7B65-4D3A-BE17-8AF0678FBC92}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Client</RootNamespace>
-    <AssemblyName>Client.net</AssemblyName>
+    <RootNamespace>Server</RootNamespace>
+    <AssemblyName>Server.net</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -21,7 +21,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>embedded</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\Build\Client\</OutputPath>
+    <OutputPath>..\Build\Server\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -29,7 +29,7 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>embedded</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>..\Build\Client\</OutputPath>
+    <OutputPath>..\Build\Server\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -37,12 +37,12 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="CitizenFX.Core">
-      <HintPath>..\lib\Client\CitizenFX.Core.dll</HintPath>
+      <HintPath>..\lib\Server\CitizenFX.Core.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="ManagedAPI.Client.net, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="ManagedAPI.Server.net, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Build\ManagedAPI.Client.net.dll</HintPath>
+      <HintPath>..\Build\ManagedAPI.Server.net.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
